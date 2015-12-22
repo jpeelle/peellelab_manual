@@ -1,0 +1,622 @@
+%!TEX TS-program = xelatex
+
+\documentclass[letterpaper,12pt,oneside]{memoir}
+\usepackage{color}
+\usepackage[pdftitle={Peelle Lab Manual}, pdfauthor={Jonathan Peelle}, colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{multicol}
+
+
+
+\usepackage{array,ragged2e}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+
+\setromanfont{Cambria}
+
+
+\definecolor{shadecolor}{gray}{0.9}
+
+\setsecnumdepth{section}
+
+\maxtocdepth{subsection}
+
+\chapterstyle{article}
+
+\usepackage{color}
+
+%\pretitle{\huge\sffamily}
+%\posttitle{\vskip 0.5em}
+% \preauthor{\begin{flushleft}}
+%\postauthor{\end{flushleft}}
+%\predate{\begin{flushleft}}
+ %\postdate{\end{flushleft}}
+
+\setlength{\droptitle}{1in}
+
+\checkandfixthelayout	% for memoir class
+
+\begin{document}
+
+\title{Peelle Lab Manual}
+\author{Jonathan Peelle\\Department of Otolaryngology\\Washington University in Saint Louis\\ \url{http://peellelab.org/peellelab_manual.pdf}}
+\date{\today}
+
+\maketitle
+
+\pagestyle{titlingpage}
+
+\cleardoublepage
+\frontmatter
+\tableofcontents
+\cleardoublepage
+
+\mainmatter
+
+\pagestyle{headings}
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+
+My goal is to foster an environment of consistent scientific excellence and personal development that supports every lab member in reaching their full potential, and helps us have fun while doing great science. I want you to be happy and productive while you are here. This manual is a first point of reference for current lab members as we strive to achieve these goals, and serves as a general introduction for prospective members. You can also find the lab elsewhere:
+
+\begin{itemize}
+\item Lab website: \url{http://peellelab.org}
+\item Facebook\footnote{What, you haven't ``liked'' our page yet?}: \url{http://facebook.com/PeelleLab}
+\item Twitter: \url{http://twitter.com/peellelab}
+\end{itemize}
+
+\noindent There are also a couple of sites accessible only by lab members:
+
+\begin{itemize}
+\item Lab wiki: \url{http://sites.google.com/site/peellelab/}
+\item Basecamp: \url{https://Basecamp.com/2054582}
+\end{itemize}
+
+In general, firm policies are in the lab manual, whereas ways of implementing these policies (i.e., getting stuff done) are on the wiki so that they can be updated by anyone in the lab. Basecamp organizes tasks that need to be done (and relevant discussions) for specific projects, rather than general principles. Any information that is potentially private should go in a protected location. (You can read more about various lab resources in \Sref{sec:communicationInLab} on \pref{sec:communicationInLab}.)
+
+The LaTeX source for the lab manual is available from \url{https://github.com/jpeelle/peellelab_manual}.
+
+ \begin{shaded}
+\noindent I assume the lab manual and wiki are accurate. This means that you should follow all of the policies and protocols contained in the manual and wiki. If you notice something that seems to be wrong, please let me know (for the lab manual) or change it yourself (for the wiki). If there is something in the lab manual or wiki that you notice people aren't doing, please bring this up at lab meeting, or to me, privately---don't assume this is okay (it's not).
+\end{shaded}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{General} % About the lab
+
+\section{Funding}
+
+External funding supplies the vast majority of resources needed to conduct our research, including salary for personnel, equipment, subject payment, and so on. It is important that we run the lab in a way that shows we use our research funding wisely.
+
+Our current funding includes:
+
+\begin{itemize}
+\item{R01DC014281 from \href{http://www.nidcd.nih.gov}{NIDCD}, ``The neurocognitive basis of listening effort''. Often called the ``lexical competition'' grant.}
+\item{A David Mahoney Neuroimaging Grant from the Dana Foundation to look at relationship of age, hearing, and cognitive factors in speech comprehension}
+\end{itemize}
+
+Funding from NIH (through our own grants or those to collaborators) means that work in the lab is supported by the taxpaying public.
+
+
+\section{Local Collaborators}
+\begin{itemize}
+\item{\href{http://orl.wustl.edu/culver.html}{Joe Culver} (Radiology) directs the optical radiology lab and is a co-investigator on several projects using optical imaging (HD-DOT) to measure neural responses to speech.}
+\item{\href{http://otocore.wustl.edu/firsztlab/Home.aspx}{Jill Firszt} (Otolaryngology) directs the adult cochlear implant program. We are working with Jill on projects related to cognitive processing and listening effort in listeners with cochlear implants.}
+\item{\href{http://otooutcomes.wustl.edu}{Jay Piccirillo} (Otolaryngology) is an MD with whom we sometimes work on issues related to attentional dysfunction in tinnitus. He runs the Outcomes research group, on the same floor as our lab.}
+\item{\href{http://psychweb.wustl.edu/sommers}{Mitch Sommers} (Psychology): We have several ongoing projects with Mitch's lab looking at lexical competition, eyetracking, and listening effort.}
+\item{\href{http://kristinvanengen.wordpress.com}{Kristin Van Engen} (Linguistics/Psychology) collaborates on a number of studies looking at listening effort, accented speech, and memory for degraded speech.}
+\end{itemize}
+
+\section{Other Collaborators}
+\begin{itemize}
+\item{\href{http://www.mrc-cbu.cam.ac.uk/people/matt.davis/}{Matt Davis} (MRC Cognition and Brain Sciences Unit) was my supervisor during a postdoc in Cambridge and we still work together on projects looking at the neurobiology of speech comprehension.}
+\item{\href{http://www.jessicagrahn.com}{Jessica Grahn} (University of Western Ontario): Beat and rhythm perception, and the effects of musical training on brain structure.}
+\item{\href{http://ftd.med.upenn.edu/}{Murray Grossman} (Penn) was my mentor during two separate postdoctoral positions. We are primarily working together on a grant looking at aging and hearing loss during speech comprehension, with Art Wingfield.}
+\item{\href{http://www.reilly-coglab.com}{Jamie Reilly} (Temple): I am working with Jamie on a project examining object naming and semantic memory in dementia. Fun fact: Jamie is the only person I know who has published an article on Sherlock Holmes (sort of).}
+\item{\href{http://www.bio.brandeis.edu/faculty/wingfield.html}{Art Wingfield} (Brandeis) was my PhD advisor and remains a close friend. In addition to being a co-investigator on the grant with Murray, I look to Art for wisdom, council, and humor.}
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Being in the lab}
+
+% Lab notebook?
+
+
+
+\section{Everyone}
+
+\subsection{Big picture}
+
+We expect each other to:
+
+\begin{itemize}
+\item Push the envelope of scientific discovery and personal excellence. 
+\item Double-check our work, and be at least a little obsessive.
+\item Be supportive---we're all in this together.
+\item Be independent when possible, ask for help when necessary.
+\item Communicate honestly, even when it's difficult.
+\item Mentor those more junior.
+\item Work towards proficiency in Unix, Matlab, and R (bonus points for Python and LaTeX).
+\item Be patient. Including with your PI. He will forget things you just talked about, and repeat some stories over and over. Them's the breaks.
+\item Advocate for our own needs, including personal and career goals.
+\item Respect each other's strengths, weaknesses, differences, and beliefs.
+\item Water the plants when they need it.
+\item \textbf{Keep everything awesome.}
+\end{itemize}
+
+\subsection{Small picture}
+
+We're sharing a relatively small space, so please be thoughtful of others, including (but not limited to):
+
+\begin{itemize}
+\item Be considerate with the thermostat. Everyone has different preferences, so we all need to learn to compromise.
+\item With few exceptions, \textbf{do not come to the lab if you are sick}. It's better to keep everyone healthy. Health is especially important because we are in a clinical building with hospital patients here for care, and we have a responsibility to keep them healthy, too. If you are sick, email the lab manager or me to let me know you won't be coming in, and update your lab calendar to reflect the change.
+\item Do not leave food, drinks, or crumbs out in the lab. Please put food trash in another trash can (not in the lab), especially late in the day or on Friday (so that food doesn't stay in the lab overnight).
+\item Lock the door if there is no one in the lab, even if you will only be gone ``a minute''.
+\item Avoid wearing perfumes/colognes/etc.\ in the lab.
+\item Keep the lab neat---especially in the phone area. Items left unattended may be cleaned, reclaimed, or recycled.
+\end{itemize}
+
+
+\section{The Boss}
+
+You can expect me to:
+
+\begin{itemize}
+\item Have a vision of where the lab is going.
+\item Care about your happiness.
+\item Obtain the funding to support the science, and the people, in the lab.
+\item Support you in your career development, including writing letters of recommendation, introductions to other scientists, conference travel, and promoting your work as often as possible.
+\item Support you in your personal growth by giving you flexibility in working hours and environment, and encouraging you to do things other than science.
+\item Treat you to coffee.
+\item Make the time to meet with you regularly, read through your manuscripts, and talk about science.
+\item Obsess over font choice, punctuation, and graphic design.
+\end{itemize}
+
+\section{Postdocs}
+
+I expect postdocs to move towards being more PI-like, including  giving talks, writing grants, and cultivating an independent research program (while still supporting the lab's research). 
+
+%If you are supported by a specific grant, which will usually be the case, [you shouldn't expect to stay past that grant?]
+
+Postdoc salaries generally follow NIH guidelines (regardless of the source of funding).
+
+\section{PhD students}
+
+I expect PhD students to:
+
+\begin{itemize}
+\item Know the literature related to their topic like the back of their hand.
+\item Seek out and apply for fellowships and awards (including travel awards, etc.).
+\item Realize there are times for pulling all nighters, and times for leaving early to go to the park and enjoy the sunshine.
+\end{itemize}
+
+By the time you're done, you will have to know how to do statistics and plots in R, use Matlab scripts for data analyses, know enough Python to navigate presentation in PsychoPy, and  make figures and posters using Adobe Illustrator or a similar graphics program. The learning curve can be a little steep on these but it's well worth it.
+
+\section{AuD capstone students}
+I expect AuD students will be organized and independent, and---importantly---manage their time and clinical responsibilities so that they complete a project by the end of the year, which requires being somewhat strategic in the topic we pick. The written report is typically due at the end of April, with an oral presentation in early May.
+
+\section{Employees}
+
+I expect paid employees, whether full-time or part-time, to use their time efficiently to support the projects to which they are assigned. Paid employees will typically have the most interaction with other staff, and with research participants, and in these contexts especially should be a model of professionalism.
+
+\subsection{Hours}
+Work hours in the lab are 8:30--5:00, with 30 minutes for lunch. If you are testing participants outside of this time, we will adjust accordingly for those weeks. You are responsible for keeping your hours at the agreed amount (8 hours per day, 40.0 hours per week for full-time employees). To maintain full-time benefits eligibility your hours cannot drop (much) below 40; if on a given week you work substantially less than 40 hours, vacation time will be used to make up the difference (per HR policy).
+
+Time off should be requested at least 2 weeks in advance, via email. Once approved (via email) please add to the lab calendar. You are responsible for making sure you have sufficient vacation hours to cover any time off; otherwise, you will not be paid.
+
+Sick time should also be requested over email. Per HR policy, full-time employees are allowed up to 5 unverified sick instances per fiscal year (beyond this medical verification is required).
+
+\begin{shaded}
+\noindent Even if you speak with me in person, it is important to document these requests (and my approval) over email so that we have a record. It is your responsibility to make sure this happens.
+\end{shaded}
+
+\subsection{Timesheets}
+
+\begin{itemize}
+\item Hours entered on your timesheet should reflect hours actually at work.
+\item Web clock times should be entered from the lab (from a lab computer---not your cell phone).
+\item Clock out for breaks 30 minutes or longer (this is your lunch).
+\item Submit your timesheet before the due date.
+\end{itemize}
+
+
+\subsection{Employee resources}
+
+There are many resources and benefits available through human resources (\url{http://medschoolhr.wustl.edu}). These are spelled out to some degree on the website, and I can also put you in touch with people in the department or HR who can offer guidance.
+
+
+\section{Undergraduate students}
+
+\subsection{Honors students}
+
+Students who have already demonstrated themselves to be careful and independent workers for a minimum of 3 months may apply to do an honors project in the lab. The overall project should be discussed in the Spring for completion the following year. Due dates and requirements differ across programs; check with your individual program for application requirements. I expect that we will start working on this over the summer before the project year, whether that involves you working in the lab over the summer, or working from home.
+
+Because honors projects necessarily rely on lab resources, they need to fit within the overall scope of lab research. I have a list of possible honors projects to choose from which fit within our ongoing research which we can use as a starting point for our discussions.
+
+
+
+% table describing deadlines for student projects
+\begin{table}
+\centering
+\caption{Deadlines for one-year research projects}
+\begin{tabular}{lcc}
+\toprule
+& Senior honors & Capstone\\
+\midrule
+Topic picked& \multicolumn{2}{c}{Spring of prior year}\\
+Stimulus materials finalized& \multicolumn{2}{c}{September 1}\\
+IRB approval finalized& \multicolumn{2}{c}{September 15}\\
+Data collection begun& \multicolumn{2}{c}{October 1}\\
+15 minute lab talk on background& \multicolumn{2}{c}{Fall semester}\\
+Draft of introduction and methods& \multicolumn{2}{c}{December 20}\\
+Complete written draft& March 1& April 1\\
+Practice talk& April 1 & April 15\\
+Final written draft& End of April & End of April\\
+Oral presentation& After Spring break & Early May\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Independent study students}
+With rare exceptions, undergraduate students in the lab during the year should enroll in an independent study section to receive credit for time in the lab. Failing to do so will severely limit the kinds of projects in which you can be involved, to the point of it not being worth you being in the lab.
+
+Independent study students should plan on producing an annotated bibliography of 5--10 articles on their selected topic, and making a 15-minute presentation at lab meeting sometime during the semester. (Depending on what department you are enrolled through, you may have additional requirements.)
+
+
+
+\subsection{All undergraduates}
+
+I expect undergraduates to be utterly reliable and willing to help with whatever projects need it. At a bare minimum, reliability includes showing up on time, maintaining your hours on the lab calendar, and making sure that all of your work is accurate (double-check everything). If you find yourself without a specific project:
+
+\begin{itemize}
+\item Ask around to see if you can help with anything.
+\item Look on the wiki under ``Essential lab skills'' and spend some time learning something new.
+\item Look on Basecamp for either a wiki page that needs creating/updating, or other miscellaneous lab tasks that need to be done.
+\end{itemize}
+
+There is enough to do that you should not be bored!
+
+Your first semester in the lab is an opportunity to see whether continuing in the lab is a good fit; after your first semester we will meet and discuss whether you will continue.
+
+\section{University policies}
+
+\subsection{Employee guidelines}
+Important guidance on benefits and policies (including time off policies and the School of Medicine Employee Handbook) are available on the medical school human resources website: \url{http://hr.med.wustl.edu/Policies/}. It is important that these policies are followed at all times. You are responsible for reviewing the policies and benefits; human resources is a good resource and they can help you if you have any questions.
+
+\subsection{Sexual harassment}
+University policy requires that if any faculty member (such as me) becomes aware of any sexual harassment or abuse involving students or employees we are obligated to report it to the Title IX Sexual Harassment Response Coordinator. Counselors and other medical professionals on campus who discuss these issues in their professional capacity can keep patient confidentiality.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Communication}
+\section{Communication within the lab}
+\label{sec:communicationInLab}
+
+I am usually busier than I'd like to be, and as a result have less time for talking to folks than I'd like. However, \textbf{you (lab members) are one of the most important parts of my job}, and I need your help to stay organized and involved in the things I need to be involved in. Three general rules of thumb are:
+
+\begin{enumerate}
+\item Be proactive---tell me what you need. This includes coming to knock on my door even if it seems like you are interrupting, emailing me to set up a time to meet, or catching me before or after lab meeting. In all likelihood I will not check in with you as often as I'd like, so it is up to you to make sure nothing falls through the cracks.
+
+\item Write things down and remind me what we've talked about. I would love to remember everything we decided when we met last week, but this doesn't always happen. Don't hesitate to bring me up to speed when we meet. Even if I already remember what we are talking about, a couple of introductory topic sentences will help get me in the right frame of mind. Be sure to write down everything in your lab notebook and Basecamp!
+
+\item Read all of the lab documentation: this lab manual, the lab wiki, and Basecamp. You are responsible for knowing what is in each of these places, following the rules and guidelines we have set up, and notifying someone if you find incorrect information (or if you have questions).
+\end{enumerate}
+
+\subsection{Lab meeting}
+We meet once each week to talk about science together, and to make sure we have a chance to touch base on administrative and practical issues. There may even be a snack. Regular attendance and participation is expected (unless you have a class or clinical responsibilities during that time).
+
+
+\subsection{Basecamp}
+Basecamp is the official record of what we talked about: If it's not in Basecamp it didn't happen. So, please help me by keeping Basecamp up to date. A few thoughts and tips:
+
+\begin{itemize}
+\item If we have a meeting to talk about your project, take notes on your laptop right in Basecamp. Make a new discussion with notes from the day---you can copy these over elsewhere later. (Alternatively, take notes on paper, but then put it in Basecamp right away so you remember.)
+
+\item Use the to-do lists, both for yourself and others (including me). It helps me see what is coming up, and what things you are thinking about. Take the time to assign a person responsible when possible (including yourself, or me).
+
+\item When you post a message, you can optionally have it emailed to people on the project. One of the nice things about Basecamp is that in theory it can reduce the amount of email we have to read. If you need a response, or it's critical I know what you've added, then by all means have Basecamp email me. But if you are just taking notes or updating an ongoing discussion, uncheck the box and it will save me a few minutes.
+\end{itemize}
+
+\subsection{Wiki}
+
+The lab wiki is our shared collection of knowledge about how to get things done in the lab. The lab manual you are reading now is ``top down'', in that I am writing the whole thing myself. By contrast the wiki is a shared resource to which everyone can---and should---contribute. A good rule of thumb is that if you need to figure out how to do something, someone else in the lab may someday need to do the same thing. Whenever possible please document what you figure out on the wiki, including updating old sections which may no longer be relevant. Please encourage each other (and those working with you) to do the same!
+
+
+\subsection{Email}
+I expect you will read all email sent to you, and respond (if a response is needed) as soon as possible, and definitely within one business day. [One ``business day'' because I encourage you to occasionally take a break from email on evenings and weekends, and will (sometimes) do the same myself.]
+
+I will do my best to respond to your emails as soon as I can. Email from the lab is some of my favorite email! Unfortunately sometimes my inbox gets clogged with other things, or I may not have time to think through an answer the way I'd like to. If something is urgent, please remind me (in person or via email). 
+
+\subsection{Calendars}
+
+Accurate calendars are extremely important in managing lab space and resources. It is crucial that everyone use the calendars regularly and ensure they are accurate. \textbf{Use the lab calendars and follow the instructions described on the wiki.}
+
+
+\subsection{Cubbies}
+
+In the closet are trays (aka ``cubbies'') for every lab member. If you have items you want to leave in the lab (such as papers you are working on), leave them here rather than out on a table. If you need to leave something for a lab member, put it here.
+
+Please check your cubby when you come into the lab.
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\section{Communication outside the lab}
+
+Communicating to people outside the lab is extremely important: your actions reflect not only on yourself, but on the lab, the lab director, the department, and the university. This is true both for participants (who volunteer for our studies) and scientific colleagues (whose opinions have a direct impact on our success and opportunity---they are the ones reviewing our grants and papers!). It is important that every time one of us represents the lab it is to a high level of quality. The less experience you have, the more preparation is required. Don't skimp!
+
+\subsection{Phone}
+If the phone rings in the lab, answer it: identify the lab and your name. Most calls will be from potential (or current) research participants, so it's important they view us as professional and competent. ``Peelle Lab. This is [your name here]. How may I help you?'' is a great start. Remember that many people calling will be older and/or have hearing loss, so speak slowly and clearly.
+
+Check voicemail messages daily to make sure nothing important slips through.
+
+If someone calls the lab and leaves a message, call them back within one business day to confirm that we received the call. If they would like to participate in a study but we can't schedule them, thank them for their interest and ask if we can contact them in the future should one come up (if you actually will). If you are not going to contact them (or they do not qualify), tell them that we are done recruiting for that study and do not have anything else available, but thank them for their interest. Refer to \Sref{sec:participants} (\pref{sec:participants}) and the lab wiki for detailed instructions on scheduling participants and general phone etiquette.
+
+
+\subsection{Manuscripts}
+
+When you are out in the big world on your own, you are free to format your manuscripts however you like. While you're in the Peelle Lab, when sending me a draft of a manuscript, please do the following:
+
+\begin{itemize}
+\item Include page numbers.
+\item Include the full author list starting from the first draft, which helps clarify any authorship issues or concerns early on.
+\item Include placeholders for all sections (i.e., introduction, methods, results, discussion, etc.) even if they are empty, so that we can fill them in as we go.
+\item Use styles, especially for headings. This will help to organize the manuscript and also to easily change font and formatting if need be. (In other words, to make a heading, don't simply select the text and make it bold; select the text and then a heading style, such as Heading 1.)
+\item While we are sending drafts back and forth, keep the text single-spaced. If the journal requires double spacing, we can add this at the end.
+\item Embed figures in the body of the manuscript rather than putting at the end, or in separate files. Again, we can change this to match journal guidelines before submitting.
+\end{itemize}
+
+Some of these are just good practice; others are simply my own preferences, but if you humor me in these it will decrease my distraction when reading your writing, and  enable me to be more useful. I'm happy to send you a blank draft manuscript to get you started.
+
+Your papers should be free of spelling and grammatical errors. There is no shame in asking for help with this; your fellow labmates, classmates, or the writing center (\url{http://writingcenter.wustl.edu}) are available to help. The best proofreaders will explain to you \textit{why} things need to be changed so that you learn how to be a better writer, rather than simply correcting your writing. By taking time to clarify your writing early on, you will become a better writer, and also free me up to help you focus on the scientific content. If you send me a paper with grammatical errors and sloppy writing I will return it to you, which is annoying for both of us.
+
+
+ \begin{shaded}
+\noindent When naming files, please include your name and a version number. If you send me a file called ``Research\_Statement.docx'', it is likely to get lost---try ``Baldrick\_research\_statement\_v01.docx'' (assuming your name is Baldrick and this is the first version you are sending me). Renaming files with initials when making comments is generally helpful; I would send this file back to you named ``\ldots\_jp.docx''. After you incorporate any changes, you can then create a new document named ``Baldrick\_research\_statement\_v02''.
+\end{shaded}
+
+%\subsection{Corresponding authorship}
+%On average, I am around the longest and have the best chance of having access to data, etc. To keep the rules the same for everyone I am always corresponding author for research conducted in the lab.
+
+
+
+\section{Abstracts}
+Anyone submitting an abstract for a conference, symposium, etc. should clear this with me first, and circulate to all authors at least one week before the submission deadline.
+
+\subsection{Talks}
+Anyone giving a talk to a non-lab audience is required to give a practice talk to the lab at least one week before the real talk. If this is your first public talk on a lab project, plan on at least two practice talks (starting at least 2 weeks before the real talk). Practice talks should be mostly finished (final slides, practiced, and the right length) so that our comments will be as helpful as possible. Schedule one or more meetings with me ahead of time to plan or go over your slides, especially if you haven't given many talks before.
+
+\subsection{Posters}
+Anyone presenting a poster should circulate an initial version to all authors at least one week before the printing deadline. Use the lab Adobe Illustrator template so that our posters have a consistent look to them. If this is your first time using Illustrator, make sure to leave plenty of extra time so you can learn how to use the software.
+
+Make sure to double check the poster size and orientation for the conference, and the size of the paper or canvas it will be printed on.
+
+For many conferences you will want to bring a sign-up sheet where people can request an emailed PDF.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Science}
+
+\section{Scientific integrity}
+
+You have a responsibility to me, the institutions that support our work, and the broader scientific community to uphold the highest standards of scientific accuracy and integrity. By being in the lab you agree to adhere to professional ethical standards. There is never an excuse for fabricating or misrepresenting data. If you have any questions, or in the unlikely event that you have concerns about something in the lab, please talk to me immediately.
+
+It is also important that you prioritize the accuracy of your work while in the lab. Unintentional errors due to inattentiveness or rushing can be extremely damaging and produce results that turn out to be incorrect. Although there is always a pressure for a high quantity of research, \textbf{it is critical that everything we do is of the highest quality}. Please double-check your work frequently. In many cases multiple people will double-check a data set to ensure no mistakes have crept in along the way.
+
+
+\section{Open, accurate, and reproducible science}
+\label{sec:openscience}
+
+\subsection{Open science}
+
+We are not there yet, but we are working towards putting all stimuli, data, and analyses online and linked to each research publication. The idea is not ti simply tick a box of ``open science'', but to make these resources readable and useable for reviewers and other researchers. In service of this:
+
+\begin{itemize}
+\item Items need to be documented and described. At a minimum, each collection should have a README file at the top level that provides details about the item in question (such as a set of stimuli or an analysis).
+\item Code should be tested, bug-free, and (helpfully) commented.
+\item Links should be permanent (ideally a DOI).
+\end{itemize}
+
+In pursuit of this high level of organization and documentation, lab members will frequently be asked to review and error-check lab materials (including sound files, text lists of stimuli, etc.). Lab members creating stimuli or conducting research projects should organize them from the outset in a way that is conducive to eventual sharing (github, ipython notebooks, etc.).
+
+
+\subsection{Accurate science}
+
+A key part of accuracy is anticipating and avoiding ``adverse events'' (including near misses), and creating structures in the lab that facilitate a high level of reliability.
+
+Inspired by a blog post on reliability in the lab\footnote{\url{http://jeffrouder.blogspot.com/2015/03/is-your-lab-highly-reliable.html}} we have a page on the lab wiki for reporting adverse events, and have allocated time at lab meeting to make sure none slip through the cracks. Examples of adverse events include:
+
+\begin{itemize}
+\item Any of the lab computers malfunctioning (including freezing or crashing)
+\item Not being able to find the installation disc for a software program
+\item Nearly running out of money to pay participants (this counts as a ``near miss'' which we also need to discuss)
+\end{itemize}
+
+As a lab member it is your responsibility to be aware of times when things don't go as planned and bring these to the attention of the rest of the group. Even better, let's all work together to find ways of preventing such occurrences in the future.
+
+
+
+\section{Participants}
+\label{sec:participants}
+
+Our research is made possible by the goodwill and generosity of our research participants. We not only need people to participate in our studies, but to try hard to do their best, and potentially return for a future study. Caring for our participants is one of the most important parts of the lab and something in which every member plays a role.
+
+The most important thing is that participants must always be confident that we are professional and treating them with respect. All of the specific advice supports these goals. In general, it is helpful to model our interactions off of other professional situations, such as a doctor's office.
+
+For all participants:
+
+\begin{itemize}
+\item Dress professionally: No jeans, t-shirts, sweatshirts, sneakers, or sandals. When in doubt, ask! This is true for both young and older adults---dressing professionally will help undergraduate participants to take the experiment seriously.
+\item Answer the phone, and return all phone calls (and emails) promptly. Tell participants who you are, and where you are calling from: ``Hello, this is [name] calling from the Peelle Lab at Washington University. I am returning your call from yesterday regarding a research study.''
+\item Be prepared to answer questions. If you don't know the answer, it is completely fine to ask the participant if someone else can call them back. You are then responsible for making sure this happens quickly.
+\item Arrive at least 30 minutes prior to testing time to make sure equipment and paperwork are all set, and to be around in the event the participant shows up early. Everything should be set up before the participant arrives. You should be at the designated meeting spot 15 minutes before the agreed upon time.
+\end{itemize}
+	
+For non-students, and especially older adults:
+
+\begin{itemize}
+\item Always use a title (Dr./Ms./Mr.) and a participant's last name when addressing them. If you aren't sure how to pronounce their name, ask them.
+\end{itemize}
+
+We can also help participants feel more at ease by being thoughtful about the language we use. For example, participating in a ``research study'' is more friendly than being a ``subject'' in an ``experiment''.
+
+% table for research terms
+\begin{table}
+\centering
+\caption{Terms associated with research studies}
+\begin{tabular}{ll}
+\toprule
+Instead of saying: & Say this:\\
+\midrule
+experiment& study, research study\\
+subject& volunteer, participant\\
+test (e.g., ``hearing test'')& task or screening (``hearing screening'')\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Some participants are involved in multiple studies, and they may lose track of which person is associated with which study. Make sure to remind participants you are calling or emailing that you are from the Peelle Lab, and clarify the location for testing when the time comes.
+
+Refer to the lab wiki for specific information on recruiting, scheduling, and testing participants.
+
+
+\section{Subject payment}
+\label{sec:subject_payment}
+
+We typically pay our subjects in cash---this is easier for them, and thus we are more likely to get repeat subjects. One of the lab members takes out a travel advance, and then people testing participants will take out what they need to pay the subjects. Each subject signs a payment sheet to document that they got paid. Naturally, it is very important that we keep track of this money.
+
+\begin{itemize}
+\item If you are running subjects and take cash from the advance, you are responsible for returning signed forms and/or cash equalling that amount. If you lose the forms, you will have to track down the subject and have them sign a new one, or pay back the missing cash out of your pocket.
+\item If you are the one taking out the travel advance, you are responsible for reconciling the advance (and any shortfall not otherwise accounted for).
+\end{itemize}
+
+
+
+\section{Testing locations}
+\label{sec:testing_locations}
+
+\begin{itemize}
+\item Many of our shared testing locations are shared with other researchers, so it is very important that we are good citizens when it comes to using these spaces. Being a good citizen includes scheduling the time as required, not using more then our allotted time, and leaving the room as clean as we found it (or preferably cleaner).
+\item No Peelle Lab equipment should be left in testing rooms---this includes laptop, audiometer, microphone, etc. (It all lives in the lab.)
+\item No one should test a subject without signing out the testing room.
+\end{itemize}
+
+ See the lab wiki for specific instructions for various locations.
+
+
+
+\section{Lab notebook}
+\label{sec:lab_notebook}
+
+Anyone conducting an independent research project should have a lab notebook for keeping track of discussions, experiments, and taking notes. You may also want to use an electronic notebook (e.g., Evernote) as your primary lab notebook, or to supplement a paper copy. The important thing is that you are keeping notes, and they are in one place.
+
+\section{Computers and data}
+
+\subsection{General guidelines}
+
+\begin{itemize}
+\item Testing laptops should never leave the lab except for testing. Always sign out the computer and any other equipment (such as the EPrime dongle) on the lab resources calendar.
+\item Do not install extraneous software or store personal files on the computers.
+\end{itemize}
+
+\subsection{Backing up your files and data}
+
+Always assume that as soon as you turn your back the computer on which you have been working will explode. \textbf{Make sure your work is always backed up.} Thinking such dire thoughts will make it easier to follow these guidelines:
+
+\begin{itemize}
+\item If you save files to the shared lab drive, backup will automatically happen. When working on a lab computer save all of your files to the shared drive. If you are working on lab projects on your own computer, transfer these files to the shared lab drive regularly to make sure they are in one place, and backed up.
+\item Full-time employees should back up their computers on an external hard drive, preferably through an automated backup program (such as Apple's Time Machine or SuperDuper!) that runs at least daily.
+\item Data from participants is irreplaceable and should be removed from testing computers immediately following testing and onto the lab server in the ``outputs'' folder for the appropriate study. (MRI data is an exception as it is already backed up on CNDA.)
+\end{itemize}
+
+
+\section{Authorship}
+Many professional associations and journals have published authorship guidelines, which are worth looking at (for example: \href{http://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html}{ICMJE}). In my view there are two key requirements to being an author:
+
+\begin{enumerate}
+\item{Contribute to the scientific content of the manuscript in a meaningful way.}
+\item{Contribute to the writing of the manuscript in a meaningful way.}
+\end{enumerate}
+
+Note that ``collect data'', ``analyze data'', or ``fund the study'' aren't on the list. Those are very important parts of a paper, but do not (on their own) warrant authorship. Being an author means understanding the content and being willing to take public responsibility for the work: a large part of this concerns the theoretical motivation and implications of the research. In practice theoretical contributions are most often made through helping with the study design, data interpretation, and discussion about a topic.
+
+This doesn't mean that as an undergraduate or research assistant you can't be an author on a paper. Of course, if the study goes well and you are involved, you can be. However, you will need to know enough (or learn enough) about the subject to understand what we've done, and to contribute to the writing. I won't add you to a paper just because I like you and want to help you out; I {\itshape will} give you the opportunity to be involved to a degree that you have earned authorship, if you are willing to take on the challenge.
+
+I assume that, unless we have talked about it, I will be an author on papers coming out of the lab. This does not mean that you should add me on to papers as a courtesy; it means that I expect you to include me in the process of discussion and writing in a way that merits authorship. In other words, the same approach I take with you.
+
+It is worth pointing out that there are many views regarding authorship, and within any view there are always borderline cases. When collaborating with other people, I tend to defer to their own lab culture. However, it's important that within our own lab, we are clear on the expectations for authorship and transparent about authorship discussions and decisions. If you ever have any questions, please come speak to me.
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Other}
+\section{Recommendation letters}
+It is part of my job (and, thankfully, quite often a pleasure) to write letters of recommendation for people in the lab. Please give me as much notice as possible, and make sure I know the deadline, format (electronic? printed?), official name of the organization, what you are applying for, and so on. Please also send along a current CV.
+
+If you are an undergraduate, I will write your letters on my own. For more senior lab members, please send me a draft of the letter (which I will modify). The first few times you do this it will probably feel awkward. However, keep in mind that your goal is to make it as easy as possible for a letter writer (in this case, me) to complete the task by the deadline and without error. Even if I re-word a lot of the letter---which I probably will---it will still have the name of what you are applying for, and hopefully some details regarding how long I have known you, the projects you have worked on, and so on. This is extremely helpful and will give me more time to focus on saying good things about you. Don't worry about being too ``braggy''; I have no problem toning things down if need be.
+
+Like everything else, communication is key, and when in doubt, ask!
+
+%%%%%%%%%%%%%%%%%%%%%
+\chapter{Frequently asked questions}
+
+\begin{description}
+\item[Where are all the FAQs?] \hfill \\
+No one has asked any questions yet.
+
+
+\end{description}
+
+\vspace{.2in}
+\noindent \textbf{\large If you are looking at a printed version, please write questions here:}
+
+
+%
+%\backmatter % appendices etc, - restart pages?
+
+\chapter{Glossary}
+
+\begin{description}
+
+\item[HRPO (``harpo'') (Human Research Protection Office)] \hfill \\
+The office in charge of human subjects research and the IRB.
+
+\item[IRB (Institutional Review Board)] \hfill \\
+The IRB oversees human subjects research and makes sure that research is conducted in a way that protects subjects' safety and privacy. Our lab submits protocols to the IRB which describe the research we want to do; the approved protocol is linked to a particular consent form that subjects sign when they participate, informing them about the study.
+
+\item[PI (principal investigator)] \hfill \\
+In the context of a grant, the PI is the person responsible for making sure the proposed research gets done. More broadly it refers to a researcher who has their own research group or lab (i.e., someone who would be in a position to be a PI on a grant, regardless of whether or not they are currently funded).
+
+\item[project] \hfill \\
+In our lab, a ``project'' refers to a specific IRB protocol, whereas a ``study'' is a particular experiment done under this umbrella approval.
+
+\item[study] \hfill \\
+In our lab, a ``study'' refers to an experiment (such as ``False Hearing II'') that falls under an umbrella IRB project.
+
+\end{description}
+
+\vspace{.2in}
+\noindent \textbf{\large If you are looking at a printed version, please make a list of terms you'd like defined (feel free to include a suggested definition):}
+
+
+
+%\chapter{Lab entry form}
+%
+%\chapter{Lab exit form}
+%
+%\chapter{Lab 6-month review}
+
+\chapter*{Reading test}
+\noindent Lab members: If you are looking at a printed version, please write your name below to indicate you have read the current version of the manual and agree to follow these policies.
+
+\vspace{,5in}
+
+\noindent Date \hspace{.5in} Printed name \hspace{1.5in} Signature\\
+
+
+\end{document}
