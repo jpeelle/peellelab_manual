@@ -330,7 +330,7 @@ Important guidance on benefits and policies (including time off policies and the
 \subsection{Sexual harassment}
 University policy requires that if any faculty member (such as me) becomes aware of  sexual harassment or abuse involving students or employees we must report it to the Title IX Sexual Harassment Response Coordinator. Counselors and other medical professionals on campus who discuss these issues in their professional capacity can keep patient confidentiality.
 
-Although the motivation for mandated reporting is probably honorable, in practice it's wise to be aware of how these cases usually go. For example: \href{http://proflikesubstance.scientopia.org/2016/12/20/winning-a-title-ix-case/}{http://proflikesubstance.scientopia.org/2016/12/20/winning-a-title-ix-case}.
+Although the motivation for mandated reporting is probably honorable, in practice it's wise to be aware of how these cases usually go. For example: \href{http://proflikesubstance.scientopia.org/2016/12/20/winning-a-title-ix-case/}{http://proflikesubstance.scientopia.org/2016/12/20/winning-a-title-ix-case}. I am happy to talk about this in person and help point you towards other possible resources.
 
 
 
@@ -379,11 +379,11 @@ Basecamp is the main tool for lab communication and is preferred to email in alm
 \begin{itemize}
 \item If we have a meeting to talk about your project, take notes on your laptop right in Basecamp. Make a new discussion with notes from the day---you can copy these over elsewhere later. (Alternatively, take notes on paper, but then put it in Basecamp right away so you remember.)
 
-\item Use the to-do lists, both for yourself and others (including me). It helps me see what is coming up, and what things you are thinking about. Take the time to assign a person responsible when possible (including yourself, or me).
+\item Use the to-do lists, both for yourself and others (including me). It helps me see what is coming up, and what things you are thinking about. Take the time to assign a person responsible when possible (including yourself, or me). And please assign due dates! (Otherwise I can lose track of items.)
 
 \item When you post a message, you can optionally have it emailed to people on the project. One of the nice things about Basecamp is that it can reduce the amount of email we have to read. If you need a response, or it's critical I know what you've added, then by all means have Basecamp email me. But if you are just taking notes or updating an ongoing discussion, uncheck the box and it will save me a few minutes.
 
-\item I make an effort prioritize Basecamp over email. Most things you would email me are related to a project, and can thus be a message (or to-do) in Basecamp. The advantage (in addition to me replying to it sooner) is that it helps loop other people in and keep our discussions organized.
+\item I prioritize Basecamp over email. Most things you would email me are related to a project, and can thus be a message (or to-do) in Basecamp. The advantage (in addition to me replying to it sooner) is that it helps loop other people in and keep our discussions organized.
 
 \end{itemize}
 
@@ -547,13 +547,17 @@ As a lab member it is your responsibility to be aware of times when things don't
 Anyone starting a new research project should follow this approach, which I've adapted from other labs. The goal is to have a consistent way of doing things in the lab that encourages open science, collaboration, and me being able to understand your project after you have left the lab.
 
 \begin{itemize}
-\item \textbf{The main repository.} Have me start a project on Open Science Framework\footnote{\url{http://osf.io}} (OSF) with you as a contributor for your project. This project should contain a descriptive README.md file that gives the study background and hypotheses, a description of all of the files in the repository, and links to any relevant files not in the repository. Basically, with the README.md file, another researcher should be able to understand and repeat the study.
 
-\item \textbf{Data}. The OSF repository should contain the programs used to collect the data (e.g., EPrime, PsychoPy, etc.), any raw non-MRI data, processed data used for statistics, etc.
+\item \textbf{The main study folder.} Create (or ask me or the lab manager to create) a folder on our lab Box drive in the appropriate IRB section. Your study folder should be named descriptively and have two subfolders: a \texttt{private} folder that contains non-shareable information (for example, identifying participant information) and a \texttt{shared} folder that contains all of the items we want to share when we publish the study. Subfolders in \texttt{shared} typically include \texttt{materials}, \texttt{data}, and \texttt{analysis}.  The \texttt{shared} folder should contain a descriptive README.md file that gives the study background and hypotheses, a description of all of the files in the repository, and links to any relevant files not in the repository. Basically, with the README.md file, another researcher should be able to understand and repeat the study.
 
-\item \textbf{Stimuli.} Stimuli should be uploaded to OSF before data collection starts. These could be in the main repository, but if they might be used by another study---which is often the case---they should have their own repository, and be linked from the lab website.
 
-\item \textbf{Statistics.} Scripts for analysis---for example, from R, Matlab, or JASP---should be in the OSF repository. Scripts should be written to use the open data as much as possible; for example, by getting data directly from OSF rather than from the local disk, or by including code to handle MRI data downloaded from a shared repository. Wherever possible scripts should also generate figures as close to those in the paper as practical.
+\item \textbf{The online repository.} Have me start a project on Open Science Framework\footnote{\url{http://osf.io}} (OSF) with you as a contributor for your project, which I will link to the shared folder.
+
+\item \textbf{Data}. The \texttt{shared} folder should contain the programs used to collect the data (e.g., EPrime, PsychoPy, etc.), any raw non-MRI data, processed data used for statistics, etc.
+
+\item \textbf{Stimuli.} Stimuli should be in the \texttt{materials} subfolder in \texttt{shared}. If they might be used by another study---which is often the case---they should have their own repository, and be linked from the lab website and the study README file.
+
+\item \textbf{Statistics.} Scripts for analysis---for example, from R, Matlab, or JASP---should be in the \texttt{analysis} folder of the \texttt{shared} folder. Scripts should be written to use the open data as much as possible; for example, by getting data directly from OSF rather than from the local disk, or by including code to handle MRI data downloaded from a shared repository. Wherever possible scripts should also generate figures as close to those in the paper as practical.
 
 \item \textbf{Final figures.} EPS, PDF, and/or PNG images of final figures should be in the repository with an explicit CC-BY creative commons license so that the figures can be re-used without charge by us and others (e.g., in review articles).
 
